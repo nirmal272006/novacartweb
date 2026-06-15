@@ -35,10 +35,9 @@ const totalPrice = cart.reduce(
 );
   return (
     <main className="relative overflow-hidden min-h-screen bg-gradient-to-b from-[#F8FAFC] via-[#F3F0FF] to-[#6600FF] p-10">
-      <div className="absolute top-20 left-10 w-72 h-72 bg-[#A78BFA]/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-20 left-10 w-72 h-72 bg-[#A78BFA]/20 rounded-full blur-3xl pointer-events-none"></div>
 
-<div className="absolute bottom-20 right-10 w-72 h-72 bg-[#8B5CF6]/20 rounded-full blur-3xl"></div>
-
+<div className="absolute bottom-20 right-10 w-72 h-72 bg-[#8B5CF6]/20 rounded-full blur-3xl pointer-events-none"></div>
       <section className="text-center py-12">
   <h1 className="text-5xl font-bold text-[#6D28D9]">
     Checkout
@@ -49,8 +48,7 @@ const totalPrice = cart.reduce(
   </p>
 </section>
     {/*form section*/}
-      <div className="bg-white p-8 rounded-3xl shadow-xl mx-auto max-w-2xl">
-
+      <div className="relative z-10 bg-white p-8 rounded-3xl shadow-xl mx-auto max-w-2xl">
         <input
   type="text"
   placeholder="Full Name"
@@ -75,7 +73,8 @@ const totalPrice = cart.reduce(
   className="w-full border p-3 rounded-xl mb-4 text-[#0F172A]"
 />
 
-        <button
+        <button>
+          type="button"
           onClick={handleOrder}
           className="inline-block bg-[#6D28D9] text-white px-6 py-3 rounded-xl hover:bg-[#8B5CF6] transition"
         >
