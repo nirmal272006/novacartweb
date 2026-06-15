@@ -31,38 +31,40 @@ export default function Home() {
     <div className="absolute bottom-20 right-10 w-72 h-72 bg-[#8B5CF6]/20 rounded-full blur-3xl"></div>
 <div className="relative z-10">
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-5 bg-[#6D28D9]/95 backdrop-blur-md shadow-md">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-[#6D28D9]/95 backdrop-blur-md shadow-md px-4 sm:px-8 py-4">
 
-        <div className="flex items-center gap-3">
+  <div className="flex justify-between items-center">
 
-          <Image
-            src="/logo.png"
-            alt="NovaCart"
-            width={50}
-            height={50}
-          />
+    {/* Logo + Brand */}
+    <div className="flex items-center gap-2">
 
-          <h1 className="text-3xl font-bold text-white">
-            NovaCart
-          </h1>
+      <Image
+        src="/logo.png"
+        alt="NovaCart"
+        width={40}
+        height={40}
+      />
 
-        </div>
+      <h1 className="text-xl sm:text-3xl font-bold text-white">
+        NovaCart
+      </h1>
 
-        <button className="bg-[#0F172A] text-white px-5 py-2 rounded-lg">
-          <Link href="/cart">
-           Cart 🛒 (
-{
-  cart.reduce(
-    (total, item) => total + item.quantity,
-    0
-  )
-}
-)
-          </Link>
-        </button>
+    </div>
 
-      </nav>
 
+    {/* Cart */}
+    <Link href="/cart">
+      <button className="bg-[#0F172A] text-white px-3 sm:px-5 py-2 rounded-lg text-sm sm:text-base">
+
+        🛒 Cart ({cart.length})
+
+      </button>
+    </Link>
+
+
+  </div>
+
+</nav>
       {/* Hero Section */}
 
       <section className="text-center py-20 px-6">
