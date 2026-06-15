@@ -73,7 +73,7 @@ const totalPrice = cart.reduce(
   className="w-full border p-3 rounded-xl mb-4 text-[#0F172A]"
 />
 
-        <button>
+        <button
           type="button"
           onClick={handleOrder}
           className="inline-block bg-[#6D28D9] text-white px-6 py-3 rounded-xl hover:bg-[#8B5CF6] transition"
